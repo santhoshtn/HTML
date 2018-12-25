@@ -1,0 +1,158 @@
+@import "compass/css3";
+.group::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+.head{
+    position: fixed;
+    width:100%;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    padding-bottom: 500px;
+}
+body{
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction: column;
+}
+.navigation {
+    list-style: none;
+    margin: 0; 
+    
+    background: deepskyblue;
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content:space-around;
+    flex-flow:row wrap;
+ }
+  .navigation img{
+      height: 50px;
+      width:50px;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+  }
+  
+  .navigation a:hover {
+    background: darken(deepskyblue, 2%);
+  }
+  
+  @media all and (max-width: 992px) {
+    .navigation {
+      justify-content: space-around;
+    }
+    .hero-unit{
+        padding-top: 400px;
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    .navigation {
+      -webkit-flex-flow: column wrap;
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    .hero-unit{
+        padding-top: 700px;
+    }    
+    .navigation a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255,255,255,0.3); 
+      border-bottom: 1px solid rgba(0,0,0,0.1); 
+    }
+  
+    
+    .navigation li:last-of-type a {
+      border-bottom: none;
+    }
+  }
+  .hero-unit{
+      padding-top: 100px;
+  }
+ 
+
+ .row {
+    display: flex;
+    flex-wrap: wrap;
+   
+  }
+  
+  /* Create THREE equal columns */
+  .column {
+    flex: 25%;
+    padding: 20px;
+    background-color:rgb(63, 209, 235);
+  }
+  
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 992px) {
+    .column {
+      flex: 50%;
+    }
+  }
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
+    .imgi{
+        height:100px;
+        width:100px;
+    }
+  }
+  .parallax {
+    /* The image used */
+    background-image: url("img2.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  .footer 
+  {
+      display:flex;
+      justify-content:space-around;
+}
+  .footer li{
+    list-style: none;
+    display: inline;
+}
+  .footer a {
+     text-decoration:none;
+  }
+  
+.imgi
+{
+    height: 300px;
+    width:300px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .imgi
+{
+    height: 100px;
+    width:100px;
+}
+.hero-unit{
+  padding-top:300px; 
+}
+}
